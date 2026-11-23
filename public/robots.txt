@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Allow: /syllabus
+Disallow: /course
+Disallow: /enroll
+Disallow: /thanks
+Disallow: /access
+Disallow: /api/
+
+Sitemap: https://ai-fluency-playbook-ri0jqi.freebuff.site/sitemap.xml

@@ -1,0 +1,21 @@
+{
+  "name": "ai-fluency-playbook",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "The AI Fluency Playbook — a paid, sign-in gated course site: public sales page, syllabus, enrollment, Stripe-ready checkout and an owner access dashboard, all served by one Cloudflare Worker.",
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "syllabus": "node tools/build-syllabus.mjs",
+    "test": "node tools/build.mjs && node tools/harness.mjs",
+    "audit": "node tools/audit.mjs",
+    "check": "npm run test && npm run audit",
+    "preview": "node tools/serve-audit.mjs"
+  },
+  "dependencies": {
+    "@freebuff/auth": "^0.1.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0"
+  }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0}
+  html,body{width:1200px;height:630px;overflow:hidden}
+  body{
+    background:#07090e;color:#e9edf5;font-family:"Inter Tight",system-ui,sans-serif;
+    padding:64px 72px;display:flex;flex-direction:column;justify-content:space-between;position:relative;
+  }
+  .glow{position:absolute;width:760px;height:760px;border-radius:50%;filter:blur(90px);
+    background:radial-gradient(circle,rgba(200,255,77,.19),transparent 62%);right:-190px;top:-260px}
+  .glow2{position:absolute;width:640px;height:640px;border-radius:50%;filter:blur(80px);
+    background:radial-gradient(circle,rgba(92,225,255,.14),transparent 64%);left:-220px;bottom:-320px}
+  .brand{display:flex;align-items:center;gap:12px;font-size:19px;font-weight:500;position:relative}
+  .mark{width:14px;height:14px;border-radius:4px;background:linear-gradient(140deg,#c8ff4d,#5ce1ff);box-shadow:0 0 22px rgba(200,255,77,.6)}
+  .brand em{font-family:"Instrument Serif",Georgia,serif;font-style:italic;color:#c8ff4d;font-size:23px;margin-left:6px}
+  .eyebrow{font-family:"JetBrains Mono",monospace;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#8d97a9;margin-top:52px}
+  h1{font-size:82px;line-height:.96;letter-spacing:-.038em;font-weight:500;margin-top:18px;position:relative}
+  h1 em{font-family:"Instrument Serif",Georgia,serif;font-style:italic;color:#c8ff4d}
+  .lede{margin-top:22px;font-size:21px;line-height:1.45;color:#b3bfd1;max-width:640px;position:relative}
+  .foot{display:flex;align-items:center;justify-content:space-between;gap:20px;position:relative}
+  .nums{display:flex;gap:34px}
+  .nums div{display:flex;flex-direction:column}
+  .nums b{font-family:"Instrument Serif",Georgia,serif;font-size:34px;line-height:1;color:#e9edf5}
+  .nums span{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#69738a;margin-top:5px}
+  .badge{font-family:"JetBrains Mono",monospace;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:#0a0d12;background:#c8ff4d;padding:9px 16px;border-radius:999px}
+</style>
+</head>
+<body>
+  <div class="glow"></div><div class="glow2"></div>
+  <div>
+    <div class="brand"><span class="mark"></span> AI Fluency<em>Playbook</em></div>
+    <p class="eyebrow">38 lessons · 5 levels · one payment</p>
+    <h1>Stop using AI<br />like a <em>search box.</em></h1>
+    <p class="lede">A plain-English course on working with AI agents, written for people who don’t get it the first time.</p>
+  </div>
+  <div class="foot">
+    <div class="nums">
+      <div><b>38</b><span>lessons</span></div>
+      <div><b>48</b><span>prompts</span></div>
+      <div><b>5</b><span>levels</span></div>
+      <div><b>$19</b><span>lifetime</span></div>
+    </div>
+    <span class="badge">Beginner → mastermind</span>
+  </div>
+</body>
+</html>

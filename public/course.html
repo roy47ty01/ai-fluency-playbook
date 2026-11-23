@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Your course — AI Fluency Playbook</title>
+<meta name="robots" content="noindex, nofollow" />
+<meta name="description" content="The AI Fluency Playbook course: five levels, thirty-eight lessons, forty-eight prompts." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23080a10'/%3E%3Cpath d='M8 22 16 8l8 14' stroke='%23c8ff4d' stroke-width='2.4' fill='none'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor-glow" aria-hidden="true"></div>
+
+<header class="nav">
+  <a class="nav-brand" href="#top">
+    <span class="brand-mark" aria-hidden="true"></span>
+    <span>AI Fluency<em>Playbook</em></span>
+  </a>
+  <nav class="nav-links" aria-label="Sections">
+    <a href="/">← Main page</a>
+    <a href="#start">Start here</a>
+    <a href="#path">Curriculum</a>
+    <a href="#videos">Watchlist</a>
+    <a href="#lab">3D lab</a>
+    <a href="#prompts">Prompts</a>
+    <a href="#tools">Tool map</a>
+  </nav>
+  <button class="comfort-btn" id="comfortToggle" type="button" aria-pressed="false" title="Bigger text, calmer spacing, every slow explanation open">Comfort reading</button>
+  <span class="nav-who" id="navWho" hidden></span>
+  <div class="nav-progress" title="Course progress">
+    <svg viewBox="0 0 40 40" aria-hidden="true">
+      <circle class="ring-bg" cx="20" cy="20" r="16"></circle>
+      <circle class="ring-fg" id="ringFg" cx="20" cy="20" r="16"></circle>
+    </svg>
+    <span id="ringLabel">0%</span>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <canvas id="scene3d" aria-hidden="true"></canvas>
+    <div class="hero-inner">
+      <p class="eyebrow"><span class="dot"></span> <span id="eyebrowCount">38 lessons · 5 levels</span> · updated November 2026</p>
+      <h1>Beginner to<br /><em>mastermind.</em></h1>
+      <p class="hero-lede">
+        A complete course on working with AI agents — not tips, a curriculum. It starts where you actually
+        are, ends with you designing the system instead of writing the prompt, and tells you every place
+        it can go wrong. Built for Freebuff, useful with any agent.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#start">Find my starting level</a>
+        <a class="btn btn-ghost" href="#path">See the curriculum <span aria-hidden="true">→</span></a>
+      </div>
+      <dl class="hero-stats">
+        <div><dt id="statLessons">38</dt><dd>lessons, at your pace</dd></div>
+        <div><dt id="statPrompts">48</dt><dd>tested prompts</dd></div>
+        <div><dt id="statLevels">5</dt><dd>levels, scored</dd></div>
+        <div><dt id="statTests">162</dt><dd>test questions</dd></div>
+        <div><dt id="statProgress">0</dt><dd>completed</dd></div>
+      </dl>
+    </div>
+    <div class="scroll-hint" aria-hidden="true"><span></span>scroll</div>
+  </section>
+
+  <!-- ================= ASSESSMENT ================= -->
+  <section class="section" id="start">
+    <div class="section-head reveal">
+      <p class="kicker">Start here</p>
+      <h2>Where are you, honestly?</h2>
+      <p class="section-sub">
+        Eight questions, thirty seconds. You'll get a starting level and a reason — then you can skip
+        what you already know instead of sitting through it. Nothing is sent anywhere.
+      </p>
+    </div>
+    <div class="quiz-wrap reveal">
+      <div class="quiz-panel">
+        <div class="quiz-top">
+          <h3>Level check</h3>
+          <div class="quiz-meter"><span id="quizCount">0 / 8</span><div class="meter-bars" id="quizBars"></div></div>
+        </div>
+        <div id="quizBody"></div>
+        <div class="quiz-out" id="quizOut" hidden></div>
+      </div>
+      <p class="quiz-hint">Most people who think they're advanced land in Operator. That's normal — the gap is almost always verification and context, not clever prompts.</p>
+    </div>
+  </section>
+
+  <!-- ================= OUTCOMES ================= -->
+  <section class="section" id="outcomes">
+    <div class="section-head reveal">
+      <p class="kicker">What this actually buys you</p>
+      <h2>Four differences, one month in</h2>
+      <p class="section-sub">Not "unlock your potential". Specific, boring, checkable changes to how your week runs.</p>
+    </div>
+    <div class="outcome-grid">
+      <article class="outcome reveal">
+        <span class="outcome-num">01</span>
+        <h3>You brief, you don't beg</h3>
+        <p>Requests come out as scoped tasks with a definition of done, so the first answer is usually the usable one.</p>
+      </article>
+      <article class="outcome reveal">
+        <span class="outcome-num">02</span>
+        <h3>Mechanical work disappears</h3>
+        <p>Reformatting, summarising, chasing numbers across files, first-draft anything: handed off and checked, not typed by hand.</p>
+      </article>
+      <article class="outcome reveal">
+        <span class="outcome-num">03</span>
+        <h3>You ship things you couldn't build</h3>
+        <p>A page, a dashboard, an interactive 3D hero. You describe it, the agent builds it, you judge it.</p>
+      </article>
+      <article class="outcome reveal">
+        <span class="outcome-num">04</span>
+        <h3>You stop trusting blindly</h3>
+        <p>You know the three failure modes that actually happen, and the two-minute ritual that catches them.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================= WORKING WITH ME ================= -->
+  <section class="section section-tint" id="with-me">
+    <div class="section-head reveal">
+      <p class="kicker">Before the curriculum</p>
+      <h2>How to get the best out of me</h2>
+      <p class="section-sub">
+        Six things that change the quality of what you get back more than any prompt ever will. They're
+        true of Freebuff, Claude Code, Codex, or whatever you're using next month.
+      </p>
+    </div>
+    <div class="fb-grid">
+      <article class="fb-card reveal">
+        <span class="fb-tag">sight</span>
+        <h3>I can only see what you give me</h3>
+        <p>Files you add to a chat, folders in a project, text you paste. I can't see your computer, your inbox or last week's conversation. If it matters, put it in front of me.</p>
+      </article>
+      <article class="fb-card reveal">
+        <span class="fb-tag">surface</span>
+        <h3>Chat for thinking, Code for doing</h3>
+        <p>Chat is for drafting, deciding and explaining. Code mode is for real files, running things, building and long jobs. Most disappointment comes from using one where you needed the other.</p>
+      </article>
+      <article class="fb-card reveal">
+        <span class="fb-tag">setup</span>
+        <h3>Point me at the work</h3>
+        <p>One folder. A two-line note saying what the project is and what good looks like. That single file saves more back-and-forth than any clever instruction.</p>
+      </article>
+      <article class="fb-card reveal">
+        <span class="fb-tag">feedback</span>
+        <h3>Correct precisely, don't restart</h3>
+        <p>Quote the exact line that's wrong and say what you wanted instead. "That paragraph repeats the intro" beats "try again" every single time.</p>
+      </article>
+      <article class="fb-card reveal">
+        <span class="fb-tag">verification</span>
+        <h3>Ask me to prove it</h3>
+        <p>"What did you change, what did you not check, and what could break?" is the most useful sentence you can send an agent. Then check the one thing a reader would test.</p>
+      </article>
+      <article class="fb-card reveal">
+        <span class="fb-tag">hard limit</span>
+        <h3>Never paste secrets</h3>
+        <p>Passwords, API keys, client data you don't have permission to share, anything medical or financial about a real person. Assume anything pasted could be stored.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================= CURRICULUM ================= -->
+  <section class="section" id="path">
+    <div class="section-head reveal">
+      <p class="kicker">The curriculum</p>
+      <h2><span id="curLevels">5</span> levels, <span id="curLessons">38</span> lessons</h2>
+      <p class="section-sub">
+        Each lesson is one skill plus one drill you do on your own work, a prompt to copy, and a question
+        that tells you whether it landed. Every lesson also has an <em>in plain words</em> summary and an
+        <em>if that felt fast</em> version you can open — read them in any order, as many times as you like.
+        Progress saves in this browser.
+      </p>
+    </div>
+
+    <div class="track-tabs reveal" id="trackTabs" role="tablist" aria-label="Levels"></div>
+    <div class="track-panel reveal" id="trackPanel"></div>
+
+    <div class="path-toolbar reveal">
+      <div class="progress-rail" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-labelledby="railLabel">
+        <div class="progress-fill" id="railFill"></div>
+      </div>
+      <div class="path-toolbar-meta">
+        <span id="railLabel"><strong id="doneCount">0</strong> of <span id="railTotal">38</span> complete</span>
+        <button class="link-btn" id="resetProgress" type="button">Reset progress</button>
+      </div>
+    </div>
+
+    <div class="lesson-list" id="lessonList"></div>
+  </section>
+
+  <!-- ================= WATCHLIST ================= -->
+  <section class="section" id="videos">
+    <div class="section-head reveal">
+      <p class="kicker">Slower input · one video at a time</p>
+      <h2>Watch the people who build this stuff</h2>
+      <p class="section-sub">
+        A short curated list, not a feed. Each card says what to listen for, so you can watch one properly
+        instead of ten badly. Start with whichever level you're on.
+      </p>
+    </div>
+    <div class="video-grid" id="videoGrid"></div>
+    <div class="video-note reveal">
+      <b>About transcripts</b>
+      <p>
+        YouTube only lets a channel download its own captions, so I can't fetch and republish the words of
+        these talks. What's here is my note-taking instead: what each talk argues and which three moments
+        matter. To read the exact words, open a video and press <em>Show transcript</em> under the
+        description — then paste any section here and ask me to slow it down.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= 3D LAB ================= -->
+  <section class="section section-tint" id="lab">
+    <div class="section-head reveal">
+      <p class="kicker">Hands-on · the three 3D lessons</p>
+      <h2>The 3D lab</h2>
+      <p class="section-sub">
+        This is a real WebGL scene, not a video. Change the geometry, kill the easing, pile on particles and
+        watch the frame counter. Everything in the 3D lessons becomes obvious once you can break it yourself.
+      </p>
+    </div>
+
+    <div class="lab reveal">
+      <div class="lab-stage">
+        <canvas id="labCanvas" aria-label="Interactive 3D scene"></canvas>
+        <div class="lab-hud">
+          <span><b id="fps">–</b> fps</span>
+          <span><b id="tris">–</b> <em id="trisLabel" style="font-style:normal">triangles</em></span>
+          <span><b id="calls">–</b> draw calls</span>
+        </div>
+        <span class="lab-badge">live webgl</span>
+      </div>
+      <div class="lab-body">
+        <div class="lab-controls">
+          <div class="ctrl">
+            <div class="ctrl-head"><label>Geometry</label><output id="outGeo">icosahedron</output></div>
+            <div class="seg" id="segGeo">
+              <button type="button" data-geo="ico" class="on">Icosahedron</button>
+              <button type="button" data-geo="knot">Torus knot</button>
+              <button type="button" data-geo="box">Box</button>
+            </div>
+          </div>
+          <div class="ctrl">
+            <div class="ctrl-head"><label>Accent</label><output id="outColor">lime</output></div>
+            <div class="seg" id="segColor">
+              <button type="button" data-color="lime" class="on">Lime</button>
+              <button type="button" data-color="cyan">Cyan</button>
+              <button type="button" data-color="violet">Violet</button>
+            </div>
+          </div>
+          <div class="ctrl">
+            <div class="ctrl-head"><label for="spin">Rotation speed</label><output id="outSpin">0.6</output></div>
+            <input type="range" id="spin" min="0" max="20" value="6" />
+          </div>
+          <div class="ctrl">
+            <div class="ctrl-head"><label for="parts">Particles</label><output id="outParts">1200</output></div>
+            <input type="range" id="parts" min="0" max="6000" step="100" value="1200" />
+          </div>
+          <div class="switches">
+            <label class="switch">Wireframe only <input type="checkbox" id="swWire" checked></label>
+            <label class="switch">Ease motion (vs linear) <input type="checkbox" id="swEase" checked></label>
+            <label class="switch">Mouse parallax <input type="checkbox" id="swMouse" checked></label>
+          </div>
+        </div>
+        <div class="lab-code">
+          <header><span>what you're running</span><button class="copy-btn" id="copyLab" type="button">copy</button></header>
+          <pre id="labCode"></pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="lab-notes reveal">
+      <div class="lab-note">
+        <h4>Draw calls, not polygon count</h4>
+        <p>Each separate object is a draw call. A hundred small meshes cost more than one detailed one. That's why the particles are a single object.</p>
+      </div>
+      <div class="lab-note">
+        <h4>Easing is the whole trick</h4>
+        <p>Linear motion reads as cheap. Multiplying by a small lerp factor each frame — rather than snapping — is what makes movement feel expensive.</p>
+      </div>
+      <div class="lab-note">
+        <h4>Cap the pixel ratio</h4>
+        <p>Retina screens can quadruple the pixels you're shading. Capping at 2 is the single biggest free performance win on a 3D page.</p>
+      </div>
+      <div class="lab-note">
+        <h4>Always plan the fallback</h4>
+        <p>Some devices have no WebGL, and some people turn animation off because it makes them ill. A static frame that still looks finished is part of the design.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROMPTS ================= -->
+  <section class="section" id="prompts">
+    <div class="section-head reveal">
+      <p class="kicker">The toolkit</p>
+      <h2><span id="promptCount">48</span> prompts that do real work</h2>
+      <p class="section-sub">
+        Each one exists because it fixes a specific failure. Replace the bracketed parts and send.
+        Press <kbd>/</kbd> to search.
+      </p>
+    </div>
+    <div class="prompt-controls reveal">
+      <div class="search-wrap"><input type="search" id="promptSearch" placeholder="Search prompts — review, research, permissions…" aria-label="Search prompts" /></div>
+      <div class="chips" id="promptChips" role="group" aria-label="Filter by category"></div>
+    </div>
+    <div class="prompt-grid" id="promptGrid"></div>
+    <p class="empty-state" id="promptEmpty" hidden>Nothing matches that. Try "review", or clear the filter.</p>
+  </section>
+
+  <!-- ================= TOOL MAP ================= -->
+  <section class="section section-tint" id="tools">
+    <div class="section-head reveal">
+      <p class="kicker">Landscape check · November 2026</p>
+      <h2>The tools actually worth your time</h2>
+      <p class="section-sub">
+        The field reshuffles monthly, so treat this as a dated snapshot: what each category is genuinely
+        good at, roughly what it costs, and when reaching for it beats just asking an agent.
+      </p>
+    </div>
+
+    <div class="tool-groups">
+      <article class="tool-group reveal">
+        <header>
+          <h3>Agents that work in your files</h3>
+          <p>Read a project, edit it, run things. The most capable category for multi-step work.</p>
+        </header>
+        <ul class="tool-list">
+          <li><div class="tool-name">Claude Code <span class="tag">most used</span></div><p>Deep multi-file work from the terminal, plus IDE, desktop and web. Plan mode, subagents, hooks, MCP, scheduled routines.</p><span class="tool-price">$20 Pro · $100 Max · $200 Ultra</span></li>
+          <li><div class="tool-name">OpenAI Codex</div><p>Open-source CLI plus cloud tasks that run in the background and come back as a pull request.</p><span class="tool-price">ChatGPT Plus $20 → Pro $500</span></li>
+          <li><div class="tool-name">Cursor</div><p>Editor-first: best when you want to watch and approve every diff inline.</p><span class="tool-price">Free · $8 · $30 · $200</span></li>
+          <li><div class="tool-name">GitHub Copilot</div><p>The safe team pick. Lives on GitHub, has a cloud agent, generous free tier.</p><span class="tool-price">Free · $10 · $39 · $100</span></li>
+          <li><div class="tool-name">Google Antigravity</div><p>Google's agent surface. Free with weekly limits, sensible if you already pay for Gemini.</p><span class="tool-price">Free tier · Google AI plans</span></li>
+          <li><div class="tool-name">Cline · OpenCode · Aider</div><p>Open source, bring-your-own-key. Cheap, inspectable, no subscription lock-in.</p><span class="tool-price">Free + model costs</span></li>
+        </ul>
+      </article>
+
+      <article class="tool-group reveal">
+        <header>
+          <h3>Thinking partners</h3>
+          <p>General chat models. Where you frame, draft, analyse and argue — the non-code half of the work.</p>
+        </header>
+        <ul class="tool-list">
+          <li><div class="tool-name">Claude</div><p>Long documents, careful instruction-following, writing that doesn't read as generated.</p><span class="tool-price">Free · $20 Pro</span></li>
+          <li><div class="tool-name">ChatGPT</div><p>Broadest ecosystem: images, voice, deep research, and the widest connector support.</p><span class="tool-price">Free · $8 Go · $20 Plus</span></li>
+          <li><div class="tool-name">Gemini</div><p>Unbeatable inside Gmail, Docs, Sheets and Drive. Strong on long-source research.</p><span class="tool-price">Free · AI Pro/Ultra</span></li>
+          <li><div class="tool-name">Perplexity</div><p>Answers with sources attached. Use it instead of search when the question needs synthesis.</p><span class="tool-price">Free · $20 Pro</span></li>
+        </ul>
+      </article>
+
+      <article class="tool-group reveal">
+        <header>
+          <h3>Media and voice</h3>
+          <p>When the deliverable is a picture, a clip or a voiceover rather than text.</p>
+        </header>
+        <ul class="tool-list">
+          <li><div class="tool-name">GPT Image · Nano Banana</div><p>Current leaders on the image boards. Nano Banana is dramatically cheaper per image.</p><span class="tool-price">In ChatGPT / Gemini plans</span></li>
+          <li><div class="tool-name">Midjourney · Flux</div><p>Art direction and style control, and precise realism respectively.</p><span class="tool-price">~$10+ / credits</span></li>
+          <li><div class="tool-name">Video: Omni · Wan · Sora · Runway</div><p>Short clips, b-roll, product shots. The leaderboard changes monthly — test before committing.</p><span class="tool-price">Plan-dependent</span></li>
+          <li><div class="tool-name">ElevenLabs · Suno</div><p>Voice that doesn't sound synthetic, and usable music beds for video.</p><span class="tool-price">Free tier · ~$5+</span></li>
+        </ul>
+      </article>
+
+      <article class="tool-group reveal">
+        <header>
+          <h3>Wiring your own tools in</h3>
+          <p>Where AI stops being a chat window and starts touching your actual systems.</p>
+        </header>
+        <ul class="tool-list">
+          <li><div class="tool-name">MCP</div><p>The open standard that lets an assistant read your calendar, query a database or file a ticket. Thousands of servers exist.</p><span class="tool-price">Open standard, free</span></li>
+          <li><div class="tool-name">n8n · Make · Zapier</div><p>Visual automation with an AI step. Add intelligence to a workflow you already trust.</p><span class="tool-price">Free tier · ~$20+</span></li>
+          <li><div class="tool-name">Notion · Slack · GitHub · Linear</div><p>The four connections that pay for themselves in a week: notes, messages, code, tickets.</p><span class="tool-price">Free with your accounts</span></li>
+        </ul>
+      </article>
+    </div>
+    <p class="fineprint reveal">
+      Prices and rankings checked against vendor pricing pages and public leaderboards in November 2026.
+      Everything here moves — confirm before you pay for a year. Nothing on this page is an affiliate link.
+    </p>
+  </section>
+
+  <!-- ================= MCP ================= -->
+  <section class="section" id="mcp">
+    <div class="section-head reveal">
+      <p class="kicker">Least privilege, playable</p>
+      <h2>MCP is a USB-C port for your AI</h2>
+      <p class="section-sub">
+        Before: every integration was custom. Now: one standard, so any assistant can plug into any tool.
+        Toggle the sockets and watch what the agent can suddenly reach.
+      </p>
+    </div>
+    <div class="mcp-board reveal">
+      <div class="mcp-hub"><span class="hub-core">agent</span><span class="hub-label">your prompt</span></div>
+      <ul class="mcp-plugs" id="mcpPlugs">
+        <li><button type="button" data-cap="read my calendar">Calendar</button></li>
+        <li><button type="button" data-cap="query the customer table">Database</button></li>
+        <li><button type="button" data-cap="open a pull request">GitHub</button></li>
+        <li><button type="button" data-cap="draft a page in my workspace">Notion</button></li>
+        <li><button type="button" data-cap="file a support ticket">Linear</button></li>
+        <li><button type="button" data-cap="read runtime errors">Sentry</button></li>
+      </ul>
+      <p class="mcp-readout" id="mcpReadout">Nothing connected. The agent can only reason about what you paste in.</p>
+    </div>
+  </section>
+
+  <!-- ================= RULES ================= -->
+  <section class="section" id="rules">
+    <div class="section-head reveal">
+      <p class="kicker">The short version</p>
+      <h2>Ten rules that survive every model release</h2>
+      <p class="section-sub">If you remember nothing else, remember these. They don't depend on which tool you're paying for this month.</p>
+    </div>
+    <ol class="rules" id="rulesList"></ol>
+  </section>
+
+  <!-- ================= GLOSSARY ================= -->
+  <section class="section section-tint" id="glossary">
+    <div class="section-head reveal">
+      <p class="kicker">Reference</p>
+      <h2>The words people use</h2>
+      <p class="section-sub">So the next conversation about agents stops feeling like jargon. Tap any term.</p>
+    </div>
+    <div class="glossary" id="glossaryList"></div>
+  </section>
+
+  <!-- ================= EVIDENCE ================= -->
+  <section class="section" id="evidence">
+    <div class="section-head reveal">
+      <p class="kicker">How this was built</p>
+      <h2>Not invented — the research behind the course</h2>
+      <p class="section-sub">
+        Every lesson ends with a test because testing beats rereading. Levels follow published AI-literacy
+        frameworks. Depth came from primary documentation, not vibes. Here is the evidence, the free courses
+        worth your time, and an honest list of what I could not do.
+      </p>
+    </div>
+    <ol class="design-list reveal" id="designList"></ol>
+
+    <div class="section-head reveal" id="next-courses" style="margin-top:56px">
+      <p class="kicker">After this course</p>
+      <h2>Keep learning with these courses</h2>
+      <p class="section-sub">
+        When you finish this playbook, these are good next steps. They come from universities and the teams that
+        build these systems. Most are free; where a certificate or full access costs money, the note says so plainly.
+        Nothing here is copied — these are links, with an honest note on what each is good for.
+      </p>
+    </div>
+    <div class="course-grid reveal" id="courseList"></div>
+  </section>
+
+  <!-- ================= SOURCES ================= -->
+  <section class="section" id="sources">
+    <div class="section-head reveal">
+      <p class="kicker">Where this comes from</p>
+      <h2>Read the primary sources</h2>
+      <p class="section-sub">
+        Every claim about a product, a model behaviour or a teaching method traces to one of these.
+        Go to the source when it matters — that habit is the course.
+      </p>
+    </div>
+    <h3 class="sub-head">Technical and product claims</h3>
+    <ol class="sources" id="techSources"></ol>
+    <h3 class="sub-head">Teaching and AI-literacy research</h3>
+    <ol class="sources" id="learnSources"></ol>
+    <div class="limits-box reveal">
+      <p class="l-label">What I could not do</p>
+      <ul id="limitsList"></ul>
+    </div>
+    <h3 class="sub-head">Course sources used throughout the lessons</h3>
+    <ol class="sources" id="sourcesList"></ol>
+  </section>
+
+  <!-- ================= MASTERY ================= -->
+  <section class="section finish" id="finish">
+    <div class="mastery reveal">
+      <div class="badge" aria-hidden="true">
+        <svg viewBox="0 0 150 150">
+          <circle class="b-bg" cx="75" cy="75" r="70"></circle>
+          <circle class="b-fg" id="badgeFg" cx="75" cy="75" r="70"></circle>
+        </svg>
+        <div class="badge-in"><span class="pct" id="badgePct">0%</span><span class="lvl" id="badgeLvl">Complete lessons to rank up</span></div>
+      </div>
+      <div class="mastery-body">
+        <p class="kicker">Your record</p>
+        <h2>Finish all <span id="finishCount">38</span> and it's yours</h2>
+        <p>
+          Add your name if you want a record you can print or save as a PDF. It stays in this browser — no
+          account, no email, nothing sent anywhere.
+        </p>
+        <div class="mastery-form">
+          <input type="text" id="learnerName" placeholder="Your name" aria-label="Your name" />
+          <button class="btn btn-primary" id="printCard" type="button">Save / print card</button>
+        </div>
+        <p class="mastery-meta" id="cardMeta">0 of 38 lessons · started today</p>
+        <p class="fineprint" style="margin-top:12px">When you finish, keep going with the <a href="#next-courses" style="text-decoration:underline">free courses listed after this playbook</a>.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <span>The AI Fluency Playbook</span>
+  <span>Built for Freebuff · tool data November 2026 · <a href="#sources" style="text-decoration:underline">sources</a> · <a href="/syllabus" style="text-decoration:underline">syllabus</a></span>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<canvas id="confetti" aria-hidden="true"></canvas>
+<script type="module" src="app.js"></script>
+</body>
+</html>
